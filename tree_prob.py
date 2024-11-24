@@ -43,6 +43,16 @@ class BinaryTree:
                 queue.append(node.right)    
         return s        
 
+    def recursive_traversal(self, root):
+        print(root.key)
+        if root.left:
+            self.recursive_traversal(root.left)
+        if root.right:
+            self.recursive_traversal(root.right)    
+
+            
+
+
 if __name__ == "__main__":
     binary_tree = BinaryTree()
     binary_tree.insert_level_order('a')
@@ -51,7 +61,7 @@ if __name__ == "__main__":
     binary_tree.insert_level_order('d')
     binary_tree.insert_level_order('e')
     print(binary_tree)
-    print(binary_tree.queue)
+    binary_tree.recursive_traversal(binary_tree.root)
 
 
 
