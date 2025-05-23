@@ -13,6 +13,10 @@ class Stack:
     def __len__(self):
         return len(self.stack)
     
+    def peek(self):
+        if len(stack) != 0:
+            return self.stack[-1]
+    
     def display(self):
         while self.stack:
             print(self.stack.pop())
